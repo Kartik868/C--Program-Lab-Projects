@@ -1,0 +1,75 @@
+#include<stdio.h>
+
+//Kartik(U32JX26S0029)
+int main ()
+
+{
+    int m1,m2,m3,m4,m5;
+    int total ;
+    float percentage;
+
+    printf("enter marks in five subjects:");
+    scanf("%d %d %d %d %d",&m1,&m2,&m3,&m4,&m5);
+
+    total=m1+m2+m3+m4+m5;
+    percentage=total/5.0;
+
+    printf("total=%d\n",total);
+    printf("percentage=%.2f%%\n",percentage);
+
+    if(m1<35||m2<35||m3<35||m4<35||m5<35)
+{
+    printf("result=fail\n");
+}
+
+  else if(percentage>=75)
+
+  {
+      printf("resuslt=Distincation\n");
+  }
+  else if(percentage>=60)
+
+  {
+      printf("result=first class\n");
+  }
+  else if(percentage)
+   {
+
+       printf ("result=second class\n");
+
+   }
+       else
+        {
+            printf("result=pass class\n");
+        }
+            return 0;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
