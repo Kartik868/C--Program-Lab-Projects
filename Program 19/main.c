@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//Kartik(U32JX26S0029)
+int main()
+{
+    int *p, n,i;
+    int sum=0;
+    int largest,smallest;
+    float average;
+    printf("Enter number of elements: ");
+    scanf("%d",&n);
+    p=(int*)malloc(n*sizeof(int));
+    printf("Enter elements: \n");
+    for(i=0;i<n;i++){
+        scanf("%d",p+i);
+    }
+    largest = *p;
+    smallest = *p;
+
+    for(i=0;i<n;i++){
+        sum = sum + *(p+i);
+        if(*(p+i)>largest){
+            largest = *(p+i);
+        }
+        if(*(p+i)<smallest){
+            smallest = *(p+i);
+        }
+    }
+    average = (float)sum/n;
+
+    printf("Sum= %d\n",sum);
+    printf("Average= %.2f\n",average);
+    printf("Largest= %d\n",largest);
+    printf("Small= %d\n",smallest);
+    free(p);
+    return 0;
+}
