@@ -28,11 +28,23 @@ int main(){
                 break;
             case 4:
                 if(b!=0){
-                    printf("Remainder=%d",a%b);
-                    return 0;
+                    printf("Division= %d",a/b);
                 }else{
-                    printf("Invalid choice.");
+                    printf("Cannot divide by zero.");
                 }
+                break;
+            case 5:
+                if(b!=0){
+                    printf("Remainder=%d",a%b);
+                }else{
+                    printf("Cannot find Remainder with zero.");
+                }
+                break;
+            case 6:
+                printf("Program ended.");
+                return 0;
+            default:
+                printf("Invalid Choice!");
         }
     }
     return 0;
