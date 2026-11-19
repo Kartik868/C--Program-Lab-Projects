@@ -1,20 +1,27 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 //Kartik(U32JX26S0029)
- int main()
+int main(){
+    int units;
+    float bill = 0;
 
- {
-     int units;
-     fioat bill=0;
+    printf("Enter electricity units consumed: ");
+    scanf("%d",&units);
 
-     printf("enter electricity units consumed:");
-     scanf("%d",&units);
+    if(units <= 50){
+        bill = units * 1.50;
+    }
+    else if(units <= 150){
+        bill = (50 * 1.50 ) + ((units - 50) * 2.50);
+    }
+    else if(units <= 250){
+        bill = (50 * 1.50)+(100 * 2.50)+((units - 150) *  4.00);
+    }else{
+    bill = (50*1.50)+(100*2.50)+(100*4.00)+((units - 250)*6.00);
+    }
+    bill = bill+100;
 
-     if (units<=50)
-     {
-         bill=units*1.50;
-     }
-     else if (units<=150)+
-        ( (units-50)*2.50);
-
- }
+    printf("Electricity Bill = Rs. %.2f\n",bill);
+    return 0;
+}
